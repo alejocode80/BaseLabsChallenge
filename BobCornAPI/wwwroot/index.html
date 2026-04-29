@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<body onload="fetchData()">
+    <h1>Bob's Corn</h1>
+    <button onclick="buyCorn()" style="font-size: 24px;color: navy; cursor: pointer;border-width: medium;">Buy Corn</button>
+    <p id="response"></p>
+    <table border="1" style="margin-top: 20px;">
+        <thead>
+            <tr>
+                <th>Client ID</th>
+                <th>Order Number</th>
+                <th>Amount</th>
+                <th>Timestamp</th>
+            </tr>
+        </thead>
+        <tbody id="ordersTable">
+        </tbody>
+    </table>
+
+    <script>
+        async function buyCorn() {
+            try {
+                // const order = {
+                //     cliendId: await getClientIp(),
+                //     orderNum: `ORDER-${Date.now()}`,
+                //     amount: 1,
+                //     timeStamp: new Date().toISOString()
+                // };
+                const order = {
+                    cliendId: await getClientIp(),
+                    amount: 1
+                };
+
+                const res = await fetch('/api/orders', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(order)
+                });
+                
+                if (res.status === 429) {
+                    document.getElementById('response').innerText = 'The purchase of corn is limited to one per minute.';
+                    return;
+                }
+                
+                if (!res.ok) {
+                    throw new Error(`HTTP error! status: ${res.status}`);
+                }
+                
+                console.log('Order placed successfully:', order);
+                document.getElementById('response').innerText = 'Order placed successfully!';
+                
+                // Refresh the orders table
+                setTimeout(fetchData, 500);
+            } catch (error) {
+                console.error('Error placing order:', error);
+                document.getElementById('response').innerText = `Error: ${error.message}`;
+            }
+        }
+        
+        async function getClientIp() {
+            try {
+                const res = await fetch('https://api.ipify.org?format=json');
+                const data = await res.json();
+                return data.ip;
+            } catch {
+                // Fallback to localhost if IP fetch fails
+                return 'localhost';
+            }
+        }
+
+        async function fetchData() {
+            try {
+                const res = await fetch('/api/orders');
+                if (!res.ok) {
+                    throw new Error(`HTTP error! status: ${res.status}`);
+                }
+                const data = await res.json();
+                console.log('API Response:', data);
+                //document.getElementById('response').innerText = JSON.stringify(data, null, 2);
+                
+                // Populate table
+                const tableBody = document.getElementById('ordersTable');
+                tableBody.innerHTML = '';
+                if (Array.isArray(data) && data.length > 0) {
+                    data.forEach(order => {
+                        const row = tableBody.insertRow();
+                        row.insertCell(0).textContent = order.cliendId;
+                        row.insertCell(1).textContent = order.orderNum;
+                        row.insertCell(2).textContent = order.amount;
+                        row.insertCell(3).textContent = new Date(order.timeStamp).toLocaleString();
+                    });
+                } else {
+                    tableBody.innerHTML = '<tr><td colspan="4" style="text-align: center;">No orders found</td></tr>';
+                }
+            } catch (error) {
+                console.error('Fetch error:', error);
+                document.getElementById('response').innerText = `Error: ${error.message}`;
+            }
+        }
+    </script>
+</body>
+</html>

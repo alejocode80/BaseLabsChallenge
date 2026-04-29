@@ -1,0 +1,23 @@
+GET http://localhost:5128/api/orders
+
+###
+POST http://localhost:5128/api/orders
+Content-Type: application/json
+
+{
+    "cliendId": "A",
+    "orderNum": "{{$guid}}",
+    "amount": 1,
+    "timeStamp": "{{$datetime iso8601}}"
+}
+
+###
+POST http://localhost:5128/api/orders
+Content-Type: application/json
+
+{
+    "cliendId": "B",
+    "orderNum": "{{$guid}}",
+    "amount": 1,
+    "timeStamp": "{{$datetime iso8601}}"
+}
