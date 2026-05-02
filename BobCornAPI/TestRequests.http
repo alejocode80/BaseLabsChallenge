@@ -1,23 +1,47 @@
 GET http://localhost:5128/api/orders
+X-API-Key: dev-secret-key-12345
 
 ###
 POST http://localhost:5128/api/orders
 Content-Type: application/json
+X-API-Key: dev-secret-key-12345
 
 {
-    "cliendId": "A",
-    "orderNum": "{{$guid}}",
-    "amount": 1,
-    "timeStamp": "{{$datetime iso8601}}"
+    "clientId": "190.28.58.76",
+    "amount": 1
 }
 
 ###
 POST http://localhost:5128/api/orders
 Content-Type: application/json
+X-API-Key: dev-secret-key-12345
 
 {
-    "cliendId": "B",
-    "orderNum": "{{$guid}}",
-    "amount": 1,
-    "timeStamp": "{{$datetime iso8601}}"
+    "clientId": "190.28.58.76",
+    "amount": 1
 }
+
+###
+POST http://localhost:5128/api/orders
+Content-Type: application/json
+X-API-Key: dev-secret-key-12345
+
+{
+    "clientId": "190.10.10.60",
+    "amount": 1
+}
+
+###
+GET http://localhost:5128/api/logins
+X-API-Key: dev-secret-key-12345
+
+###
+GET http://localhost:5128/api/orders/summary?clientId=190.28.58.76
+X-API-Key: dev-secret-key-12345
+
+###
+POST http://localhost:5128/api/shiporder
+Content-Type: application/json
+X-API-Key: dev-secret-key-12345
+
+["785106c2-7c1b-4864-8a04-9d5846d10143"]

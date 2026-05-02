@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/alejandrocadavid/Documents/work/BaseLabsChallenge/BobCornAPI/BobCornAPI.csproj",
+      "projectUniqueName": "/Users/alejandrocadavid/Documents/Learning/ChallengeTest/BaseLabsChallenge/BobCornAPI/BobCornAPI.csproj",
       "projectName": "BobCornAPI",
-      "projectPath": "/Users/alejandrocadavid/Documents/work/BaseLabsChallenge/BobCornAPI/BobCornAPI.csproj",
+      "projectPath": "/Users/alejandrocadavid/Documents/Learning/ChallengeTest/BaseLabsChallenge/BobCornAPI/BobCornAPI.csproj",
       "packagesPath": "/Users/alejandrocadavid/.nuget/packages/",
-      "outputPath": "/Users/alejandrocadavid/Documents/work/BaseLabsChallenge/BobCornAPI/obj/",
+      "outputPath": "/Users/alejandrocadavid/Documents/Learning/ChallengeTest/BaseLabsChallenge/BobCornAPI/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/alejandrocadavid/.nuget/NuGet/NuGet.Config"

@@ -1,0 +1,5 @@
+/Users/alejandrocadavid/Documents/Learning/ChallengeTest/BaseLabsChallenge/BobCornAPI/publish/BobCornAPI
+/Users/alejandrocadavid/Documents/Learning/ChallengeTest/BaseLabsChallenge/BobCornAPI/publish/BobCornAPI.dll
+/Users/alejandrocadavid/Documents/Learning/ChallengeTest/BaseLabsChallenge/BobCornAPI/publish/BobCornAPI.deps.json
+/Users/alejandrocadavid/Documents/Learning/ChallengeTest/BaseLabsChallenge/BobCornAPI/publish/BobCornAPI.runtimeconfig.json
+/Users/alejandrocadavid/Documents/Learning/ChallengeTest/BaseLabsChallenge/BobCornAPI/publish/BobCornAPI.pdb
