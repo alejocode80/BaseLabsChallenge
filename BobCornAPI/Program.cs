@@ -2,6 +2,7 @@ using System.Net;
 using System.Net.Http;
 using System.Threading.RateLimiting;
 using Microsoft.AspNetCore.Authentication;
+using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRateLimiter(options =>
@@ -22,10 +23,48 @@ builder.Services.AddRateLimiter(options =>
 builder.Services.AddAuthentication("ApiKey").AddScheme<AuthenticationSchemeOptions, ApiKeyAuthenticationHandler>("ApiKey", null);
 builder.Services.AddAuthorization();
 
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen(options =>
+{
+    options.SwaggerDoc("v1", new OpenApiInfo
+    {
+        Title = "Bob's Corn API",
+        Version = "v1",
+        Description = "API for managing corn orders"
+    });
+
+    options.AddSecurityDefinition("ApiKey", new OpenApiSecurityScheme
+    {
+        Description = "API Key authentication using X-API-Key header",
+        Name = "X-API-Key",
+        In = ParameterLocation.Header,
+        Type = SecuritySchemeType.ApiKey
+    });
+
+    options.AddSecurityRequirement(new OpenApiSecurityRequirement
+    {
+        {
+            new OpenApiSecurityScheme
+            {
+                Reference = new OpenApiReference
+                {
+                    Type = ReferenceType.SecurityScheme,
+                    Id = "ApiKey"
+                }
+            },
+            Array.Empty<string>()
+        }
+    });
+});
+
 var app = builder.Build();  
 
 app.UseDefaultFiles();
 app.UseStaticFiles();
+
+app.UseSwagger();
+app.UseSwaggerUI();
+
 
 app.UseAuthentication();
 app.UseAuthorization();

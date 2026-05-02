@@ -28,8 +28,6 @@
 /Users/alejandrocadavid/Documents/work/BaseLabsChallenge/BobCornAPI/obj/Debug/net10.0/ref/BobCornAPI.dll
 /Users/alejandrocadavid/Documents/work/BaseLabsChallenge/BobCornAPI/bin/Debug/net10.0/BobCornAPI.staticwebassets.runtime.json
 /Users/alejandrocadavid/Documents/work/BaseLabsChallenge/BobCornAPI/obj/Debug/net10.0/compressed/781o6punwh-{0}-ii58zc741u-ii58zc741u.gz
-/Users/alejandrocadavid/Documents/Learning/ChallengeTest/BaseLabsChallenge/BobCornAPI/bin/Debug/net10.0/appsettings.Development.json
-/Users/alejandrocadavid/Documents/Learning/ChallengeTest/BaseLabsChallenge/BobCornAPI/bin/Debug/net10.0/appsettings.json
 /Users/alejandrocadavid/Documents/Learning/ChallengeTest/BaseLabsChallenge/BobCornAPI/bin/Debug/net10.0/BobCornAPI.staticwebassets.runtime.json
 /Users/alejandrocadavid/Documents/Learning/ChallengeTest/BaseLabsChallenge/BobCornAPI/bin/Debug/net10.0/BobCornAPI.staticwebassets.endpoints.json
 /Users/alejandrocadavid/Documents/Learning/ChallengeTest/BaseLabsChallenge/BobCornAPI/bin/Debug/net10.0/BobCornAPI
@@ -59,3 +57,11 @@
 /Users/alejandrocadavid/Documents/Learning/ChallengeTest/BaseLabsChallenge/BobCornAPI/obj/Debug/net10.0/BobCornAPI.genruntimeconfig.cache
 /Users/alejandrocadavid/Documents/Learning/ChallengeTest/BaseLabsChallenge/BobCornAPI/obj/Debug/net10.0/ref/BobCornAPI.dll
 /Users/alejandrocadavid/Documents/Learning/ChallengeTest/BaseLabsChallenge/BobCornAPI/obj/Debug/net10.0/compressed/781o6punwh-{0}-18fxfle105-18fxfle105.gz
+/Users/alejandrocadavid/Documents/Learning/ChallengeTest/BaseLabsChallenge/BobCornAPI/bin/Debug/net10.0/wwwroot/index.html
+/Users/alejandrocadavid/Documents/Learning/ChallengeTest/BaseLabsChallenge/BobCornAPI/bin/Debug/net10.0/Microsoft.OpenApi.dll
+/Users/alejandrocadavid/Documents/Learning/ChallengeTest/BaseLabsChallenge/BobCornAPI/bin/Debug/net10.0/Swashbuckle.AspNetCore.Swagger.dll
+/Users/alejandrocadavid/Documents/Learning/ChallengeTest/BaseLabsChallenge/BobCornAPI/bin/Debug/net10.0/Swashbuckle.AspNetCore.SwaggerGen.dll
+/Users/alejandrocadavid/Documents/Learning/ChallengeTest/BaseLabsChallenge/BobCornAPI/bin/Debug/net10.0/Swashbuckle.AspNetCore.SwaggerUI.dll
+/Users/alejandrocadavid/Documents/Learning/ChallengeTest/BaseLabsChallenge/BobCornAPI/obj/Debug/net10.0/BobCornAPI.csproj.AssemblyReference.cache
+/Users/alejandrocadavid/Documents/Learning/ChallengeTest/BaseLabsChallenge/BobCornAPI/obj/Debug/net10.0/BobCornAPI.MvcApplicationPartsAssemblyInfo.cs
+/Users/alejandrocadavid/Documents/Learning/ChallengeTest/BaseLabsChallenge/BobCornAPI/obj/Debug/net10.0/BobCornAPI.csproj.Up2Date

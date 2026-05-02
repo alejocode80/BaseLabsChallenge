@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BobCornAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+43a247466ff9bbd8b52b9d4539b3c03ce6883cfc")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0dde62ee5ab1477dd9a318338cf17c7395bd5a3a")]
 [assembly: System.Reflection.AssemblyProductAttribute("BobCornAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BobCornAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
